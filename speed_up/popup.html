@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speed Up</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      min-width: 280px;
+      min-height: 75px;
+      margin: 15px;
+    }
+    #speedSlider {
+      width: 220px;
+      margin-top: 10px;
+    }
+    #resetBtn {
+      margin-top: 10px;
+    }
+    #speedValue {
+      font-weight: bold;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="speedSlider">Playback Speed:</label>
+    <input type="range" id="speedSlider" min="0" max="11" step="1" value="3" />
+    <span id="speedValue">1x</span>
+  </div>
+  <button id="resetBtn">Reset</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
