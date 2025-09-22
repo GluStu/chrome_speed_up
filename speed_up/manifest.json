@@ -1,21 +1,27 @@
 {
-    "name": "Speed Up",
-    "description": "A simple extension to control playback speed of media elements on a webpage.",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions": [
-      "storage"
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }  
+  "name": "Speed Up",
+  "description": "A simple extension to control playback speed of media elements on a webpage.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "",
+      "strict_min_version": "109.0"
+    }
+  }
+}
