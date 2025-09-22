@@ -3,11 +3,20 @@
   "description": "A simple extension to control playback speed of media elements on a webpage.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
   },
   "content_scripts": [
     {
@@ -15,12 +24,9 @@
       "js": ["content.js"]
     }
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "",
+      "id": "speedup@example.com",
       "strict_min_version": "109.0"
     }
   }
